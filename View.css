@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0f1111;
+  /* background-color: #0f1111; */
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,25 +14,38 @@
   background-position: center;
 }
 
-.nave-container {
-  padding: 10px 10%;
-}
+/* -------- #Logo styles */
 
-.logo {
+/* .logo-link {
+  transition: 0.4s;
+} */
+
+.logo-link {
+  text-decoration: none; /* Removes underline */
+  display: inline-flex;
+  align-items: center;
   position: relative;
-  font-size: 30px;
-  color: #fff;
+  font-size: 2.3rem;
   font-weight: 600;
   height: 70px;
-  padding-top: 20px;
-  /* background-color: red; */
-  transition: 0.4s;
 }
-.logo a {
-  text-decoration: none;
+
+.char-1 {
+  color: black; /* Default color for "P" */
+  transition: color 0.3s ease; /* Smooth transition */
 }
-.logo span {
-  color: #ff004f;
+
+.char-2 {
+  color: #ff004f; /* Default color for "ortfolio" */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.logo-link:hover .char-1 {
+  color: #ff004f; /* Hover color for "P" */
+}
+
+.logo-link:hover .char-2 {
+  color: black; /* Hover color for "ortfolio" */
 }
 
 nav {
@@ -40,14 +54,13 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   /* padding: 0 15px 0 15px; */
-  border-bottom: 1.5px solid #ff004f;
-  padding: 0 5rem 0 5rem;
+  padding: 0.8rem 5rem 0 5rem;
 }
 
 .mode-toggle {
   background-color: transparent;
-  border: 2px solid white;
-  color: #fff;
+  border: 2px solid black;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -65,7 +78,7 @@ nav ul {
 }
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   font-size: 18px;
   position: relative;
   transition: color 0.5s ease; /* Smooth hover effect */
@@ -84,4 +97,63 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   width: 100%;
+}
+
+/* Section-1 Hero Section Styles */
+.home {
+  height: 90vh;
+  background: url();
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content {
+  color: #ededed;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.hero-content h3 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  padding-top: 10px;
+  color: #ff004f;
+}
+
+.hero-content p {
+  font-size: 17px;
+  margin: 20px 0 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-content .btn-box {
+  width: 345px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.btn-box a {
+  display: inline-flex;
+  width: 150px;
+  text-decoration: none;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+  color: #ff004f;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #ff004f;
 }
