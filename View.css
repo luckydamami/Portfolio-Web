@@ -84,6 +84,10 @@ nav ul li a {
   transition: color 0.5s ease; /* Smooth hover effect */
 }
 
+nav ul li a:hover {
+  color: #ff004f;
+}
+
 nav ul li a::after {
   content: "";
   width: 0;
@@ -92,7 +96,7 @@ nav ul li a::after {
   position: absolute;
   left: 0;
   bottom: -6px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 nav ul li a:hover::after {
@@ -102,10 +106,15 @@ nav ul li a:hover::after {
 /* Section-1 Hero Section Styles */
 .home {
   height: 90vh;
-  background: url();
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  padding: 0 10%;
+  justify-content: space-between;
+  padding: 0 7%;
+  gap: 50px;
+}
+.home img {
+  border-radius: 50%;
 }
 
 .hero-content {
@@ -114,25 +123,27 @@ nav ul li a:hover::after {
 }
 
 .hero-content h1 {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   font-weight: 700;
 }
 
 .hero-content h3 {
   font-size: 2.1rem;
   font-weight: 700;
-  padding-top: 10px;
+  padding-top: 8px;
   color: #ff004f;
 }
 
 .hero-content p {
-  font-size: 17px;
+  font-size: 1rem;
+  line-height: 1.8;
   margin: 20px 0 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-content .btn-box {
-  width: 345px;
+  width: 325px;
+  /* margin-left: 10px; */
   display: flex;
   justify-content: space-between;
   height: 50px;
@@ -140,20 +151,47 @@ nav ul li a:hover::after {
 
 .btn-box a {
   display: inline-flex;
-  width: 150px;
+  width: 130px;
   text-decoration: none;
-  height: 100%;
+  height: 80%;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: white;
-  border: 2px solid black;
-  color: #ff004f;
-  border-radius: 8px;
-  font-size: 19px;
+  color: white;
+  background: #ff004f;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-.btn-box a:nth-child(2) {
-  background: transparent;
+.btn-box a:hover {
+  background: white;
   color: #ff004f;
+  border: 2px solid #ff004f;
+}
+
+/*.btn-box a {
+  text-decoration: none;
+  color: white;
+  background: #ff004f;
+  padding: 10px 20px;
+  margin-right: 15px;
+    font-weight: bold;
+  transition: 0.3s ease;
+}*/
+
+/*---------------About Section style*/
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.row img {
+  height: 300px;
+  width: 300px;
+  padding: 20px;
 }
